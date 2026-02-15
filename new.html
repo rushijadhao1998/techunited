@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>United Technologies Pvt. Ltd. | Website Design & Development Company</title>
+
+<meta name="description" content="United Technologies Pvt. Ltd. provides professional website design, ecommerce development and digital solutions in India.">
+<meta name="keywords" content="Website Design Company, Web Development, Ecommerce Website, IT Company India">
+<meta name="author" content="United Technologies Pvt. Ltd.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:#fff;
+}
+
+/* NAVBAR */
+header{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 60px;
+background:rgba(15,23,42,0.95);
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+height:40px;
+}
+
+.logo span{
+font-weight:600;
+font-size:18px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:30px;
+}
+
+nav ul li a{
+color:#fff;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#1e293b,#2563eb);
+padding:20px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+margin-bottom:30px;
+color:#cbd5e1;
+}
+
+.btn{
+background:#38bdf8;
+padding:14px 35px;
+border-radius:30px;
+text-decoration:none;
+color:#000;
+font-weight:600;
+}
+
+.btn:hover{
+background:#fff;
+}
+
+/* SECTIONS */
+section{
+padding:100px 60px;
+text-align:center;
+}
+
+.section-title{
+font-size:34px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#334155;
+}
+
+/* CONTACT */
+.contact form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact input,
+.contact textarea{
+padding:12px;
+border:none;
+border-radius:8px;
+}
+
+.contact button{
+padding:12px;
+border:none;
+background:#38bdf8;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+}
+
+/* FOOTER */
+footer{
+background:#020617;
+padding:20px;
+text-align:center;
+}
+
+.footer-logo{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+margin-bottom:10px;
+}
+
+.footer-logo img{
+height:35px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+header{
+padding:15px 20px;
+flex-direction:column;
+}
+nav ul{
+margin-top:10px;
+}
+.hero h1{
+font-size:32px;
+}
+section{
+padding:80px 20px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="logo.png" alt="United Technologies Logo">
+<span>United Technologies Pvt. Ltd.</span>
+</div>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div>
+<h1>Your Website, Our Responsibility</h1>
+<p>Premium Website Design & Development Company</p>
+<a href="#contact" class="btn">Start Your Project</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2 class="section-title">About Us</h2>
+<p>United Technologies Pvt. Ltd. builds powerful, responsive and SEO-friendly websites for startups, businesses and enterprises.</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<h2 class="section-title">Our Services</h2>
+<div class="grid">
+<div class="card"><h3>Website Development</h3><p>Custom & responsive websites.</p></div>
+<div class="card"><h3>E-Commerce Website</h3><p>Complete online store solutions.</p></div>
+<div class="card"><h3>UI/UX Design</h3><p>Modern & creative design.</p></div>
+<div class="card"><h3>Website Maintenance</h3><p>Security & performance optimization.</p></div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<h2 class="section-title">Contact Us</h2>
+<p>📞 +91 8446590779</p>
+<p>📧 info@unitedrural.in</p>
+
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="4" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+
+<footer>
+<div class="footer-logo">
+<img src="logo.png" alt="United Technologies Logo">
+<span>United Technologies Pvt. Ltd.</span>
+</div>
+<p>© 2026 All Rights Reserved</p>
+</footer>
+
+<a href="https://wa.me/918446590779" class="whatsapp">💬</a>
+
+</body>
+</html>
