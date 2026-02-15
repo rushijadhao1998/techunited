@@ -1120,7 +1120,7 @@ team
 }
 
 .team-item:hover .team-content .team-info {
-  margin-left: 30px;
+  margin-left: 50px;
 }
 
 .team-item i {
@@ -1154,8 +1154,7 @@ team
 
 .team-item .team-content .team-info {
   float: left;
-  margin-left: 20px;
-  margin-top: 8px;
+  margin-left: 30px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
