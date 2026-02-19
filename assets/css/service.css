@@ -34,3 +34,18 @@
     }
 
 }
+
+@media (max-width:575px) {
+
+    .hr {
+        display: none;
+    }
+
+    .service-row{
+        border: 1px solid rgb(189, 186, 186);
+        border-radius: 20px;
+        margin: 2px;
+    }
+
+
+}
