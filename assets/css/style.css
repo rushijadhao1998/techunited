@@ -157,6 +157,13 @@
 
 
 
+@media (max-width:1366px){
+    .welcome-area{
+        height: 80vh;
+    }
+}
+
+
 
 
 @media (max-width:1000px) {
