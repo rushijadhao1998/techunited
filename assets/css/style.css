@@ -56,7 +56,6 @@
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.12rem;
-    /* border-bottom: 5px solid rgb(115, 255, 0); */
     text-decoration: underline;
     text-decoration-color: rgb(115, 255, 0);
     text-decoration-thickness: 5px;
@@ -86,25 +85,17 @@
 
 .service-content
 {
-    padding: 10px;
+    padding: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
     cursor: pointer;
     color: #fff;
 }
 
-/* .service-content::before{
-  content:"✔";
-  position:absolute;
-  left:0;
-  color:#ff008c;
-  font-weight:bold;
-  margin-left: 20px;
-} */
 
 .service-content:hover{
     color: rgb(115, 255, 0);
-    font-weight: 800;
+    font-weight: 500;
 }
 
 
@@ -135,7 +126,7 @@
 
 .contact-box i:hover{
     color: #fff;
-    background: #000;
+    background: #ff589e;
 }
 
 
@@ -144,7 +135,7 @@
     height:38px;
     border-radius: 50px;
     background:#fff;
-    color:#000;
+    color:#9d5bd9;
     display:flex;
     align-items:center;
     justify-content:center;
