@@ -1,0 +1,13 @@
+.welcome-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+
+    background-image: url(../images/about.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
