@@ -1,33 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-.moving-image {
-  width: 100px; /* Set a specific width */
-  height: auto; /* Maintain aspect ratio */
-  position: relative; /* Required for 'top'/'left' properties to work, but transform is better for movement */
-  animation-name: slide-across;
-  animation-duration: 4s; /* Duration of one cycle */
-  animation-iteration-count: infinite; /* Play indefinitely */
-  animation-direction: alternate; /* Move back and forth */
-  animation-timing-function: linear; /* Constant speed */
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-@keyframes slide-across {
-  0% {
-    transform: translateX(0); /* Start at the original position */
-  }
-  100% {
-    transform: translateX(200px); /* Move 200px to the right */
-  }
-}
-
-</style>
+  <link rel="stylesheet" href="new.css">
+  <title>Document</title>
 </head>
 <body>
+  
 
-<img src="assets/images/service.png" alt="A descriptive alt text" class="moving-image">
-
+<section class="zoom-section">
+    <img src="assets/images/services/web devlop.png" alt="Zoom Image">
+</section>
 
 </body>
 </html>
+
+

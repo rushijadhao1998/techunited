@@ -12,8 +12,35 @@
 }
 
 
+
+/* Zoom Animation */
+.rounded{
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+    animation: zoomEffect 3.5s ease-in-out infinite;
+}
+
+@keyframes zoomEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Zoom Animation End */
+
+
+
+
+
+
 @media (max-width: 1000px) {
-    .welcome-area{
+    .welcome-area {
         height: 90vh;
         background-position: center top;
     }
@@ -28,7 +55,7 @@
 }
 
 @media (max-width:575px) {
-    .welcome-area{
+    .welcome-area {
         height: 80vh;
     }
 
@@ -36,7 +63,7 @@
         display: none;
     }
 
-    .service-row{
+    .service-row {
         border: 1px solid rgb(189, 186, 186);
         border-radius: 20px;
         margin: 2px;
