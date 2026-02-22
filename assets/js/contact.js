@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 emailjs.send("service_6rokkm3", "template_5x06x0b", params)
                     .then(function () {
                         alert("Message sent successfully!");
+
+
+// auto reply to customer
+emailjs.send("service_6rokkm3","template_mun3ye9",params);
                         document.getElementById("contact").reset();
                         btn.innerText = "Send Message";
                         btn.disabled = false;
