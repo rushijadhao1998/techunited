@@ -1,20 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="new.css">
-  <title>Document</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us - United Technologies Pvt. Ltd.</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#6C63FF;--dark:#0f172a;--card:#111827;--text:#e5e7eb}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:linear-gradient(180deg,#020617,#020617 40%,#050b2a);color:var(--text);overflow-x:hidden}
+section{padding:80px 10%}
+.hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative}
+.hero h1{font-size:3rem;font-weight:700;background:linear-gradient(90deg,#fff,#6C63FF);-webkit-background-clip:text;color:transparent;animation:fadeUp 1s ease forwards}
+.hero p{max-width:700px;margin-top:20px;color:#cbd5f5;animation:fadeUp 1.4s ease forwards}
+.glow{position:absolute;width:400px;height:400px;background:radial-gradient(circle,#6C63FF55,transparent 70%);filter:blur(80px);top:10%;left:50%;transform:translateX(-50%);z-index:-1}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:40px}
+.card{background:rgba(17,24,39,0.7);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:28px;transition:.4s;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,#6C63FF22,transparent);opacity:0;transition:.4s}
+.card:hover{transform:translateY(-10px);box-shadow:0 15px 40px #000}
+.card:hover:before{opacity:1}
+.card h3{color:#fff;margin-bottom:10px}
+.card p{color:#cbd5f5;font-size:.95rem}
+.section-title{text-align:center;font-size:2rem;margin-bottom:10px;font-weight:600}
+.section-sub{color:#94a3b8;text-align:center;max-width:650px;margin:0 auto 40px}
+.cta{background:linear-gradient(90deg,#6C63FF,#4f46e5);text-align:center;border-radius:20px;padding:60px 20px}
+.cta h2{font-size:2rem;margin-bottom:10px}
+.cta button{margin-top:20px;padding:14px 30px;border:none;border-radius:30px;background:white;color:#111;font-weight:600;cursor:pointer;transition:.3s}
+.cta button:hover{transform:scale(1.08)}
+.fade{opacity:0;transform:translateY(40px);transition:all .8s ease}
+.fade.show{opacity:1;transform:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-  
 
-<section class="zoom-section">
-    <img src="assets/images/services/web devlop.png" alt="Zoom Image">
+<section class="hero">
+<div class="glow"></div>
+<h1>About United Technologies Pvt. Ltd.</h1>
+<p>We help businesses build strong online presence through modern websites, SEO, hosting, domain and digital solutions. Your Website, Our Responsibility.</p>
 </section>
+
+<section class="fade">
+<h2 class="section-title">Who We Are</h2>
+<p class="section-sub">United Technologies Pvt. Ltd. is a digital solutions company delivering high-quality websites that are fast, secure and tailored to business needs. We create digital identities that help brands grow.</p>
+</section>
+
+<section class="fade">
+<h2 class="section-title">Mission & Vision</h2>
+<div class="grid">
+<div class="card"><h3>Mission</h3><p>Empower businesses with reliable and affordable digital solutions using modern technology and continuous support.</p></div>
+<div class="card"><h3>Vision</h3><p>Become a trusted digital partner across India delivering scalable and future‑ready web solutions.</p></div>
+</div>
+</section>
+
+<section class="fade">
+<h2 class="section-title">Why Choose Us</h2>
+<div class="grid">
+<div class="card"><h3>Complete Solutions</h3><p>Domain to deployment under one roof.</p></div>
+<div class="card"><h3>Affordable Pricing</h3><p>Professional services for every budget.</p></div>
+<div class="card"><h3>Fast & Secure</h3><p>Optimized performance and security.</p></div>
+<div class="card"><h3>Dedicated Support</h3><p>We support you even after launch.</p></div>
+<div class="card"><h3>Business Focused</h3><p>We build platforms that generate customers.</p></div>
+<div class="card"><h3>Long‑term Partnership</h3><p>Your Website, Our Responsibility.</p></div>
+</div>
+</section>
+
+<section class="cta fade">
+<h2>Start Your Digital Journey Today</h2>
+<p>Let’s build your professional online presence.</p>
+<button onclick="alert('Contact form connect here')">Get Started</button>
+</section>
+
+<script>
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})},{threshold:.2});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+</script>
 
 </body>
 </html>
-
-
