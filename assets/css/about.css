@@ -160,6 +160,9 @@ hr {
 
 .cta {
     background-image: url(../images/fun-facts-bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     /* background: linear-gradient(90deg, #6C63FF, #4f46e5); */
     text-align: center;
     /* border-radius: 20px; */
