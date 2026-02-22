@@ -190,6 +190,7 @@ body {
   color: #777;
   line-height: 28px;
   letter-spacing: 1px;
+  text-align: justify;
 }
 
 .left-text.light {

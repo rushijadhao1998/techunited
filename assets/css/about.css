@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    
+
 
     background-image: url(../images/about.png);
     background-repeat: no-repeat;
@@ -12,13 +12,76 @@
     background-size: cover;
 }
 
-.abt_title{
+.abt_title {
     font-size: 30px;
     font-weight: 800;
 }
+
+
+@media (max-width:1000px) {
+    .rounded {
+        width: 60%;
+    }
+}
+
+
 
 @media (max-width:700px) {
     .rounded {
         width: 90%;
     }
 }
+
+
+.mission {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+
+.mission-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 42px;
+    color: #1e1e1e;
+    letter-spacing: 0.25px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.vision-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 42px;
+    color: #1e1e1e;
+    letter-spacing: 0.25px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+/* .right-text {
+    align-items: end;
+    justify-content: right;
+    text-align: right;
+    font-weight: 400;
+    font-size: 16px;
+    color: #777;
+    line-height: 28px;
+    letter-spacing: 1px;
+} */
+
+/* .right-text.light {
+    color: #fff;
+}
+
+.right-text p {
+    margin-bottom: 30px;
+}
+
+.right-text p.dark {
+    color: #3B566E;
+} */
