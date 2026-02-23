@@ -367,7 +367,7 @@
 
 
 
-    <!-- ***** Contact Us Start ***** -->
+<!-- ***** Contact Us Start ***** -->
     <section class="section colored" id="contact-us">
         <div class="container">
             <!-- ***** Section Title Start ***** -->
@@ -405,24 +405,35 @@
                 <!-- ***** Contact Form Start ***** -->
                 <div class="col-lg-8 col-md-6 col-sm-12">
                     <div class="contact-form">
-                        <form id="contact" action="" method="get">
+                        <form id="contact">
+
+
                             <div class="row">
                                 <div class="col-lg-6 col-md-12 col-sm-12">
                                     <fieldset>
-                                        <input name="name" type="text" class="form-control" id="name"
-                                            placeholder="Full Name" required="">
+                                        <input required placeholder="Your Name" name="name" type="text"
+                                            class="form-control" id="name">
                                     </fieldset>
                                 </div>
+
                                 <div class="col-lg-6 col-md-12 col-sm-12">
                                     <fieldset>
-                                        <input name="email" type="email" class="form-control" id="email"
-                                            placeholder="E-Mail Address" required="">
+                                        <input required type="tel" name="phone" type="phone" class="form-control"
+                                            id="phone" placeholder="Phone Number">
                                     </fieldset>
                                 </div>
+
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <textarea name="message" rows="6" class="form-control" id="message"
-                                            placeholder="Your Message" required=""></textarea>
+                                        <input required type="email" name="email" type="email" class="form-control"
+                                            id="email" placeholder="E-Mail Address">
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea required placeholder="Your Message" name="message" rows="6"
+                                            class="form-control" id="message"></textarea>
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
@@ -439,6 +450,9 @@
         </div>
     </section>
     <!-- ***** Contact Us End ***** -->
+
+
+
 
     <!-- ***** Footer Start ***** -->
     <footer>
@@ -570,6 +584,10 @@
 
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/contact.js"></script>
+
+    <!-- Email Link -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> 
 
 </body>
 
