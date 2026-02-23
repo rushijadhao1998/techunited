@@ -39,8 +39,6 @@
 
 
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
 
     emailjs.init("_TW7vXq-ETDs-_rUY");
@@ -58,58 +56,37 @@ document.addEventListener("DOMContentLoaded", function () {
             phone: document.getElementById("phone").value,
             message: document.getElementById("message").value
         };
-HEAD
+
         // 1️⃣ Send message to Admin
         emailjs.send("service_6rokkm3", "template_5x06x0b", {
             ...params,
             to_email: "info@unitedtech.in"
         })
-                emailjs.send("service_6rokkm3", "template_5x06x0b", params)
-                    .then(function () {
-                        alert("Message sent successfully!");
 
+        // 2️⃣ Send auto-reply to User
+        .then(() => {
+            return emailjs.send(
+                "service_6rokkm3",
+                "template_mun3ye9",   // <-- replace with your new template ID
+                params
+            );
+        })
 
-// auto reply to customer
-emailjs.send("service_6rokkm3","template_mun3ye9",params);
-                        document.getElementById("contact").reset();
-                        btn.innerText = "Send Message";
-                        btn.disabled = false;
-                    })
-                    .catch(function (error) {
-                        console.log(error);
-                        alert("Failed to send message. Check console.");
-                        btn.innerText = "Send Message";
-                        btn.disabled = false;
-                    });
+        .then(() => {
+            alert("Message sent successfully!");
+            document.getElementById("contact").reset();
+        })
 
+        .catch((error) => {
+            console.log(error);
+            alert("Failed to send message.");
+        })
 
-            // 2️⃣ Send auto-reply to User
-            .then(() => {
-                return emailjs.send(
-                    "service_6rokkm3",
-                    "template_mun3ye9",   // <-- replace with your new template ID
-                    params
-                );
-            })
-
-            .then(() => {
-                alert("Message sent successfully!");
-                document.getElementById("contact").reset();
-            })
-
-            .catch((error) => {
-                console.log(error);
-                alert("Failed to send message.");
-            })
-
-            .finally(() => {
-                btn.innerText = "Send Message";
-                btn.disabled = false;
-            });
+        .finally(() => {
+            btn.innerText = "Send Message";
+            btn.disabled = false;
+        });
 
     });
 
 });
-
-
-
