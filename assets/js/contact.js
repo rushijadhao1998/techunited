@@ -13,38 +13,28 @@ document.addEventListener("DOMContentLoaded", function () {
             from_name: document.getElementById("name").value,
             from_email: document.getElementById("email").value,
             phone: document.getElementById("phone").value,
-            message: document.getElementById("message").value
+            message: document.getElementById("message").value,
+            reply_to: document.getElementById("email").value
         };
 
-        // Send message to Admin
-        emailjs.send("service_6rokkm3", "template_5x06x0b", {
-            ...params,
-            to_email: "info@unitedtech.in"
+        // Admin Mail
+        emailjs.send("service_6rokkm3", "template_5x06x0b", params)
+
+        // Auto Reply
+        .then(() => emailjs.send("service_6rokkm3", "template_mun3ye9", params))
+
+        .then(() => {
+            alert("Message sent successfully!");
+            document.getElementById("contact").reset();
         })
-
-            // Send auto-reply to User
-            .then(() => {
-                return emailjs.send(
-                    "service_6rokkm3",      // <-- service id
-                    "template_mun3ye9",   // <-- auto-reply template id
-                    params
-                );
-            })
-
-            .then(() => {
-                alert("Message sent successfully!");
-                document.getElementById("contact").reset();
-            })
-
-            .catch((error) => {
-                console.log(error);
-                alert("Failed to send message.");
-            })
-
-            .finally(() => {
-                btn.innerText = "Send Message";
-                btn.disabled = false;
-            });
+        .catch((error) => {
+            console.log("ERROR:", error);
+            alert("Failed to send message");
+        })
+        .finally(() => {
+            btn.innerText = "Send Message";
+            btn.disabled = false;
+        });
 
     });
 
