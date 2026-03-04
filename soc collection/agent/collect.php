@@ -20,15 +20,19 @@ a.id,
 a.account_no,
 a.installment_amount,
 a.open_date,
+a.total_amount AS opening_balance,   
+gl.ledger_name,
 c.name,
 c.mobile,
 c.address,
-gl.ledger_name,
-IFNULL(SUM(t.amount),0) AS balance
+
+IFNULL(SUM(t.amount),0) AS collected
+
 FROM accounts a
 JOIN customers c ON c.id=a.customer_id
 JOIN gl_master gl ON gl.id=a.gl_id
 LEFT JOIN transactions t ON t.account_id=a.id
+
 WHERE a.id='$acc_id'
 GROUP BY a.id
 "));
@@ -74,14 +78,12 @@ VALUES('$acc_id','$agent_id','$amount','$today')
             $new_balance = $data['total_balance'] + $amount;
 
             /* SEND SMS */
-            sendSMS(
-                $data['mobile'],
-                $amount,
-                $data['ledger_name'],
-                $data['account_no'],
-                date('d-m-Y'),
-                $new_balance
-            );
+            $date = date('d-m-Y');
+
+            $message = "Dear Customer, A sum of Rs. $amount Collect By Agent with {$data['ledger_name']} A/c No. $acc_id On date $date. Available Balance is Rs. $new_balance Cr.- UNITED RURAL SOCIETY";
+                     // Dear Customer, A sum of Rs. 500 Collect By Agent with SMALL SAVING DEPOSITE A/c No. 213 On date 21/08/24. Available Balance is Rs. 10000 Cr. - UNITED RURAL SOCIETY
+
+            sendSMS($data['mobile'], $message);
 
             echo "<script>
             Swal.fire({
@@ -163,12 +165,18 @@ VALUES('$acc_id','$agent_id','$amount','$today')
 
         <div class="mb-2">
             <div class="value"><?= $data['name'] ?></div>
+
             <small class="text-muted">A/C: <?= $data['account_no'] ?></small>
         </div>
 
         <hr>
 
         <div class="row g-2">
+
+            <div class="col-12 mt-2">
+                <div class="label mt-2">Ledger</div>
+                <div class="value"><?= $data['ledger_name'] ?></div>
+            </div>
 
             <div class="col-6">
                 <div class="label">Installment Amount</div>

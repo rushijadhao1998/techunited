@@ -55,8 +55,3 @@ function sendSMS($mobile, $amount, $ledger, $account, $date, $balance)
     return $response;
 }
 ?>
-
-
-
-// Dear Customer, A sum of Rs. {#var#} Collect By Agent with {#var#} A/c No. {#var#} On date {#var#}. Available Balance is Rs. {#var#} Cr.- UNITED RURAL SOCIETY
-
